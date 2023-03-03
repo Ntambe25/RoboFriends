@@ -16,7 +16,7 @@ function App() {
     useEffect(()=> {
         fetch('https://jsonplaceholder.typicode.com/users')
             .then(response=> response.json())
-            .then(users => {setRobots(users)})
+            .then(users => {setRobots(users)});
     }, []) 
     const filteredRobots = robots.filter(robot =>{
         return robot.name.toLowerCase().includes(searchfield.toLowerCase());
